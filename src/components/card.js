@@ -1,4 +1,25 @@
-const Card = (article) => {
+ const Card = (article) => {
+//const div1 = document.createElement("div");
+//const headline = document.createElement("div");
+//const author = document.createElement("div");
+//const imgContainer = document.createElement("div");
+//const img = document.createElement("img");
+//const authorName = document.createElement("span");
+
+//div1.classList.add("card");
+//headline.classList.add("headline");
+//author.classList.add("author");
+//imgContainer.classList.add("img-container");
+
+//div1.appendChild(headline);
+//div1.appendChild(author);
+//div1.appendChild(imgContainer);
+//div1.appendChild(img);
+//div1.appendChild(authorName);
+
+
+//return div1
+
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
@@ -18,6 +39,7 @@ const Card = (article) => {
   // </div>
   //
 }
+
 
 const cardAppender = (selector) => {
   // TASK 6
