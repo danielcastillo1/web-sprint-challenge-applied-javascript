@@ -34,6 +34,9 @@ return div1
 }
 
 const headerAppender = (selector) => {
+  const wrapper =  document.querySelector(selector)
+  wrapper.appendChild(Header("Daily news", "May 1, 2023", "71"));
+
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.

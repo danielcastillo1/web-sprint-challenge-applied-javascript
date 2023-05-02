@@ -1,21 +1,29 @@
+ import axios from 'axios';
+
  const Card = (article) => {
-//const div1 = document.createElement("div");
-//const headline = document.createElement("div");
-//const author = document.createElement("div");
-//const imgContainer = document.createElement("div");
-//const img = document.createElement("img");
-//const authorName = document.createElement("span");
+const card = document.createElement("div");
+const headline = document.createElement("div");
+const author = document.createElement("div");
+const imgContainer = document.createElement("div");
+const img = document.createElement("img");
+const authorName = document.createElement("span");
 
-//div1.classList.add("card");
-//headline.classList.add("headline");
-//author.classList.add("author");
-//imgContainer.classList.add("img-container");
+card.classList.add("card");
+headline.classList.add("headline");
+author.classList.add("author");
+imgContainer.classList.add("img-container");
 
-//div1.appendChild(headline);
-//div1.appendChild(author);
-//div1.appendChild(imgContainer);
-//div1.appendChild(img);
-//div1.appendChild(authorName);
+card.appendChild(headline);
+card.appendChild(author);
+author.appendChild(imgContainer);
+imgContainer.appendChild(img);
+author.appendChild(authorName);
+
+headline.textContent = article;
+img.textContent = article;
+authorName.textContent = article;
+
+return card
 
 
 //return div1
@@ -42,6 +50,9 @@
 
 
 const cardAppender = (selector) => {
+
+ const response = axios.get(`http://localhost:5001/api/articles/`)
+//for (let i = 0 )  
   // TASK 6
   // ---------------------
   // Implement this function that takes a css selector as its only argument.
