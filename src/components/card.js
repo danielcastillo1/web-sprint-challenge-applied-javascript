@@ -50,8 +50,8 @@ return card
 
 
 const cardAppender = (selector) => {
-
- const response = axios.get(`http://localhost:5001/api/articles/`)
+ //const response = selector
+ // response = axios.get(`http://localhost:5001/api/articles/`)
 //for (let i = 0 )  
   // TASK 6
   // ---------------------
