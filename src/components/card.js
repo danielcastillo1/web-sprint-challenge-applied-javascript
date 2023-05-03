@@ -19,9 +19,12 @@ author.appendChild(imgContainer);
 imgContainer.appendChild(img);
 author.appendChild(authorName);
 
-headline.textContent = article;
-img.textContent = article;
-authorName.textContent = article;
+const properties = document.querySelector(article)
+properties.appendChild(Card({ headline: 'foo', authorName: 'bar', authorPhoto: 'baz' }))
+
+//Card.addEventListener("click", () => {
+
+//})
 
 return card
 
@@ -50,6 +53,14 @@ return card
 
 
 const cardAppender = (selector) => {
+
+  const container = document.querySelector(selector);
+  axios.get(`http://localhost:5001/api/articles`)
+    .then((res) => {
+      const cardElement = Card(res.data.topics);
+      container.appendChild(cardElement);
+    });
+
  //const response = selector
  // response = axios.get(`http://localhost:5001/api/articles/`)
 //for (let i = 0 )  
